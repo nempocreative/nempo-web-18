@@ -281,7 +281,7 @@ export default function Slide24KategoriAwards() {
                   onMouseEnter={() => setHov(i)}
                   onMouseLeave={() => setHov(null)}
                   style={{
-                    display:'grid', gridTemplateColumns:'6% 52% 42%',
+                    display:'grid', gridTemplateColumns:'6% 52% 42%', alignItems:'center',
                     padding:'1.2cqh 1.5cqw',
                     background: isH
                       ? 'linear-gradient(90deg, rgba(212,160,23,0.16) 0%, rgba(212,160,23,0.05) 100%)'
@@ -338,7 +338,7 @@ export default function Slide24KategoriAwards() {
               onMouseEnter={() => setHov(99)}
               onMouseLeave={() => setHov(null)}
               style={{
-                display:'grid', gridTemplateColumns:'6% 52% 42%',
+                display:'grid', gridTemplateColumns:'6% 52% 42%', alignItems:'center',
                 padding:'1.8cqh 1.5cqw', marginTop:'0.8cqh',
                 border:`0.06cqw solid ${hov === 99 ? 'rgba(212,160,23,0.75)' : 'rgba(212,160,23,0.42)'}`,
                 borderLeft:`0.32cqw solid ${hov === 99 ? '#D4A017' : 'rgba(212,160,23,0.75)'}`,
@@ -358,6 +358,9 @@ export default function Slide24KategoriAwards() {
                 background:'linear-gradient(110deg, transparent 25%, rgba(212,160,23,0.07) 50%, transparent 75%)',
                 animation:'shimmer24 3s ease-in-out infinite',
               }} />
+
+              {/* Trophy in the number column so title and penilaian keep their own columns */}
+              <span aria-hidden="true" style={{ fontSize:'1.4cqw', lineHeight:1, position:'relative' }}>🏆</span>
 
               {/* Grand Champion title */}
               <p style={{

@@ -329,7 +329,7 @@ export default function Slide19ProgramAward() {
         width:'20cqw', flexShrink:0,
         background:'linear-gradient(135deg, #2A1A0A 0%, #1A0D06 100%)',
         display:'flex', flexDirection:'column', alignItems:'center',
-        justifyContent:'center', gap:'2cqh',
+        justifyContent:'center', gap:'2cqh', padding:'9cqh 0',
         position:'relative', overflow:'hidden',
         opacity: go ? 1 : 0,
         animation: go ? 'slideR19 0.8s cubic-bezier(0.22,1,0.36,1) 0.2s both' : 'none',
@@ -353,7 +353,7 @@ export default function Slide19ProgramAward() {
           fontFamily:'var(--font-display,serif)', fontWeight:900,
           color:'rgba(212,160,23,0.15)', lineHeight:0.9,
           userSelect:'none', writingMode:'vertical-rl',
-          transform:'rotate(180deg)', fontSize:'9cqw',
+          transform:'rotate(180deg)', fontSize:'5.5cqw', whiteSpace:'nowrap',
           animation:'awardPulse19 4s ease-in-out infinite',
           letterSpacing:'-0.02em',
         }}>AWARDS</p>
@@ -369,7 +369,7 @@ export default function Slide19ProgramAward() {
         <p style={{
           fontFamily:'var(--font-body,sans-serif)',
           color:'rgba(212,160,23,0.50)', letterSpacing:'0.3em',
-          textTransform:'uppercase', fontSize:'0.85cqw',
+          textTransform:'uppercase', fontSize:'0.8cqw', whiteSpace:'nowrap',
           writingMode:'vertical-rl', transform:'rotate(180deg)',
         }}>Local Champion Awards</p>
       </div>
