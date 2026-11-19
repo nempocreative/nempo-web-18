@@ -1,5 +1,13 @@
 {
   "version": "7",
   "dialect": "postgresql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1795102018150,
+      "tag": "0000_restore_nempo_rows",
+      "breakpoints": true
+    }
+  ]
 }
