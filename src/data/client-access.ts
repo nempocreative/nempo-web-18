@@ -9,6 +9,8 @@ export type KlienNempo = {
   tautan: string;
   pakaiKataSandi: boolean;
   sorotan: string[];
+  /** Set true to keep a client out of the /client-access list without deleting its data. */
+  sembunyi?: boolean;
 };
 
 export const KLIEN_NEMPO: KlienNempo[] = [
@@ -23,5 +25,10 @@ export const KLIEN_NEMPO: KlienNempo[] = [
     tautan: "/ggs-hair-studio/",
     pakaiKataSandi: false,
     sorotan: ["Layanan & harga", "Galeri gaya rambut", "Katalog produk", "Tim stylist"],
+    // Owner asked to hide GGS from the list for now; flip to false to show it again.
+    sembunyi: true,
   },
 ];
+
+/** Clients shown on /client-access: everything not hidden. */
+export const KLIEN_TAMPIL = KLIEN_NEMPO.filter((k) => !k.sembunyi);

@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout";
 import { SEO } from "@/components/seo";
 import { useEffect, useRef, useState } from "react";
 import { Check, ChevronLeft, ChevronRight, ExternalLink, Lock, MapPin, Store } from "lucide-react";
-import { KLIEN_NEMPO, type KlienNempo } from "@/data/client-access";
+import { KLIEN_TAMPIL, type KlienNempo } from "@/data/client-access";
 
 function KartuKlien({ k, tunggal }: { k: KlienNempo; tunggal: boolean }) {
   return (

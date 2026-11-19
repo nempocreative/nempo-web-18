@@ -5,9 +5,9 @@ export const Route = createFileRoute("/client-access")({
   head: () => ({
     meta: [
       { title: "Client Access — Web Klien Nempo" },
-      { name: "description", content: "Akses web klien yang dibuat Nempo, seperti GGS Hair Studio." },
+      { name: "description", content: "Akses ke web-web klien yang dibuat tim Nempo." },
       { property: "og:title", content: "Client Access — Web Klien Nempo" },
-      { property: "og:description", content: "Web klien buatan Nempo: GGS Hair Studio dan lainnya." },
+      { property: "og:description", content: "Web klien buatan Nempo, dikumpulkan di satu halaman." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
