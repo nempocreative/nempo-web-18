@@ -104,6 +104,20 @@ function GeserKlien() {
     c.scrollIntoView({ block: "nearest", inline: "start" });
   };
 
+  if (KLIEN_TAMPIL.length === 0) {
+    return (
+      <section className="mx-auto -mt-12 max-w-6xl px-4 sm:-mt-14 sm:px-6 lg:px-8">
+        <div className="rounded-lg border border-dashed border-border bg-card px-6 py-14 text-center">
+          <Store className="mx-auto h-8 w-8 text-muted-foreground" />
+          <p className="mt-4 text-lg font-bold">Belum ada web klien yang ditampilkan</p>
+          <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-muted-foreground">
+            Web klien yang sedang disembunyikan akan muncul lagi di sini setelah dibuka kembali oleh tim Nempo.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="mx-auto -mt-12 max-w-6xl sm:-mt-14" aria-roledescription="carousel" aria-label="Web klien Nempo">
       <div
@@ -157,8 +171,8 @@ export default function ClientAccessPage() {
     <Layout>
       <SEO
         title="Client Access — Web Klien Nempo"
-        description="Akses web klien yang dibuat Nempo, seperti GGS Hair Studio."
-        keywords="client access Nempo, web klien Nempo, GGS Hair Studio"
+        description="Akses web klien yang dibuat Nempo. Pilih web klienmu di sini."
+        keywords="client access Nempo, web klien Nempo"
         path="/client-access"
       />
       <main className="min-h-screen bg-slate-50/60 pb-24 text-[#17233a]">
