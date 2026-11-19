@@ -464,7 +464,7 @@ export function Layout({ children, hideBottomNav, minimalChrome }: { children: R
         }}>
         {/* Top bar */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className={`flex items-center justify-between ${isAppFrame ? "h-12 sm:h-16" : "h-16"}`}>
+           <div className={`flex items-center justify-between gap-3 ${isAppFrame ? "h-12 sm:h-16" : "h-16"}`}>
             {/* Logo */}
             <Link href="/" aria-label="NEMPO" className="flex items-center gap-2.5 shrink-0 group">
               <img
@@ -519,7 +519,7 @@ export function Layout({ children, hideBottomNav, minimalChrome }: { children: R
                 }}
               >
                 <Users className={isAppFrame ? "h-3 w-3" : "h-3.5 w-3.5"} />
-                <span className="sm:hidden">Kala Muda</span>
+                <span className="hidden min-[380px]:inline sm:hidden">Kala Muda</span>
                 <span className="hidden sm:inline">Kala Muda Community</span>
               </Link>
               <div className="relative">
