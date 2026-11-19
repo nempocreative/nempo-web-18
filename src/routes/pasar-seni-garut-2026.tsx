@@ -10,13 +10,13 @@ export const Route = createFileRoute("/pasar-seni-garut-2026")({
       {
         name: "description",
         content:
-          "Pasar Seni Garut 2026 segera hadir: 29, 30, 31 Desember 2026 di Garut, Jawa Barat. Detail acara diumumkan menyusul.",
+          "Pasar Seni Garut 2026 segera hadir: 30 dan 31 Desember 2026 di Garut, Jawa Barat. Detail acara diumumkan menyusul.",
       },
-      { property: "og:title", content: "Pasar Seni Garut 2026 — 29–31 Desember 2026" },
+      { property: "og:title", content: "Pasar Seni Garut 2026 — 30–31 Desember 2026" },
       {
         property: "og:description",
         content:
-          "Coming soon di Garut, 29–31 Desember 2026. Hitung mundurnya sudah jalan, detail acara menyusul.",
+          "Coming soon di Garut, 30–31 Desember 2026. Hitung mundurnya sudah jalan, detail acara menyusul.",
       },
       { property: "og:type", content: "website" },
       { property: "og:image", content: POSTER },

@@ -7,7 +7,7 @@ export function KeuanganFrame({ judul, children }: { judul: string; children: Re
   return <section className="relative flex h-full flex-col overflow-hidden bg-psg-bg px-[5cqw] pb-[8cqh] pt-[10cqh] font-psg-body text-psg-text">
     <img src="/media/pasar-seni-garut/batik-texture.webp" alt="" className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10" />
     <div className="relative z-10 flex min-h-0 flex-1 flex-col">
-      <p className="mb-[1cqh] text-[1cqw] text-psg-accent">PENGAJUAN SPONSOR · 29–31 DESEMBER 2026 · 3 HARI</p>
+      <p className="mb-[1cqh] text-[1cqw] text-psg-accent">PENGAJUAN SPONSOR · 30–31 DESEMBER 2026</p>
       <h2 className="mb-[3cqh] font-psg-display text-[3.2cqw] font-bold leading-tight">{judul}</h2>
       {children}
     </div>

@@ -1,9 +1,7 @@
 /**
- * Tanggal dan rundown hari 1–3 proposal Pasar Seni Garut 2026.
- * Hari pertama dan ketiga dibagi dua sesi (pagi & malam); hari pertama mulai 08.00, band setelah Zuhur sampai 17.00,
- * jeda sholat lima waktu siang–malam ikut tercantum, dan selesai 22.00.
- * Tanggal Pasanggiri & acara puncak diambil dari data lomba supaya sama dengan halaman /lomba.
- * Hari ketiga dibagi dua sesi: pagi (seni & UMKM) dan malam (penampilan pemenang & penutup).
+ * Tanggal dan rundown proposal Pasar Seni Garut 2026 — dua hari, 30–31 Desember.
+ * Hari pertama (30 Des) Pasanggiri Jaipong; hari kedua (31 Des) acara puncak, dibagi sesi pagi & malam.
+ * Tanggal diambil dari data lomba supaya sama dengan halaman /lomba.
  */
 import { PASANGGIRI } from "./pasanggiri";
 
@@ -33,68 +31,17 @@ export function durasi(time: string): string {
   return menit === null ? "—" : `${menit} menit`;
 }
 
-export const TANGGAL_ACARA = "29–31 Desember 2026";
+export const TANGGAL_ACARA = "30–31 Desember 2026";
 
 /** Kegiatan ini rutin setiap bulan — bukan acara setahun sekali. */
 export const KADENSI = "Rutin setiap bulan";
 
 export const HARI_ACARA = {
-  pembukaan: "Selasa, 29 Desember 2026",
   pasanggiri: PASANGGIRI.tanggal,
   puncak: PASANGGIRI.acaraPuncak,
 } as const;
 
-/**
- * Perkiraan waktu sholat Garut, Selasa 29 Desember 2026 (dibulatkan; cek ulang jadwal Kemenag menjelang acara).
- * Jeda sholat di rundown Hari ke-1 mencakup waktu masuk sholat tersebut.
- */
-export const WAKTU_SHOLAT_HARI_1 = { zuhur: "11.51", ashar: "15.19", maghrib: "18.08", isya: "19.24" } as const;
-
-/** Daftar waktu sholat Hari ke-1 untuk panel samping slide. */
-export const DAFTAR_SHOLAT_HARI_1 = [
-  { nama: "Zuhur", jam: WAKTU_SHOLAT_HARI_1.zuhur },
-  { nama: "Ashar", jam: WAKTU_SHOLAT_HARI_1.ashar },
-  { nama: "Maghrib", jam: WAKTU_SHOLAT_HARI_1.maghrib },
-  { nama: "Isya", jam: WAKTU_SHOLAT_HARI_1.isya },
-];
-
-/** Hari pertama, sesi pagi–sore — registrasi, technical meeting Pasanggiri, lalu panggung band setelah Zuhur. */
-export const RUNDOWN_HARI_1_PAGI: BarisRundown[] = [
-  { time: "08.00 – 09.00", activity: "Registrasi Tenant & Final Briefing",       location: "Area Tenant"     },
-  { time: "09.00 – 12.00", activity: "Technical Meeting Pasanggiri",             location: "Community Stage" },
-  { time: "12.00 – 13.00", activity: "ISHOMA & Sholat Zuhur",                    location: "Musala", adzan: WAKTU_SHOLAT_HARI_1.zuhur   },
-  { time: "13.00 – 13.45", activity: "Penampilan Band 1",                        location: "Main Stage"      },
-  { time: "13.45 – 14.30", activity: "Penampilan Band 2",                        location: "Main Stage"      },
-  { time: "14.30 – 15.15", activity: "Penampilan Band 3",                        location: "Main Stage"      },
-  { time: "15.15 – 15.45", activity: "Jeda Sholat Ashar",                        location: "Musala", adzan: WAKTU_SHOLAT_HARI_1.ashar   },
-  { time: "15.45 – 17.00", activity: "Penampilan Band 4",                        location: "Main Stage"      },
-  { time: "17.00 – 19.00", activity: "Istirahat & Sholat Maghrib",               location: "Musala", adzan: WAKTU_SHOLAT_HARI_1.maghrib },
-];
-export const SOROTAN_HARI_1_PAGI = [0, 1, 3, 7];
-export const PUNCAK_HARI_1_PAGI: number[] = [];
-
-/** Hari pertama, sesi malam — sholat Isya, grand opening dengan kesenian Sunda, ditutup MC pukul 22.00. */
-export const RUNDOWN_HARI_1_MALAM: BarisRundown[] = [
-  { time: "19.00 – 19.20", activity: "Persiapan Grand Opening",                  location: "Main Stage"      },
-  { time: "19.20 – 19.45", activity: "Sholat Isya",                              location: "Musala", adzan: WAKTU_SHOLAT_HARI_1.isya    },
-  { time: "19.45 – 19.55", activity: "Mapag (Opsional)",                         location: "Main Gate"       },
-  { time: "19.55 – 20.00", activity: "Bumper Opening",                           location: "Main Stage"      },
-  { time: "20.00 – 20.10", activity: "Penampilan 1 — Rajah",                     location: "Main Stage"      },
-  { time: "20.10 – 20.25", activity: "Penampilan 2 — Pupuh dengan Penari Latar", location: "Main Stage"      },
-  { time: "20.25 – 20.35", activity: "Monolog",                                  location: "Main Stage"      },
-  { time: "20.35 – 20.50", activity: "Teater & Silat",                           location: "Main Stage"      },
-  { time: "20.50 – 20.55", activity: "MC Masuk",                                 location: "Main Stage"      },
-  { time: "20.55 – 21.10", activity: "Sambutan & Pemukulan Goong",               location: "Main Stage"      },
-  { time: "21.10 – 21.20", activity: "Ice Breaking",                             location: "Main Stage"      },
-  { time: "21.20 – 21.35", activity: "Penampilan Tari",                          location: "Main Stage"      },
-  { time: "21.35 – 21.50", activity: "Musik Penutupan",                          location: "Main Stage"      },
-  { time: "21.50 – 22.00", activity: "Closing MC",                               location: "Main Stage"      },
-];
-export const SOROTAN_HARI_1_MALAM = [4, 5, 7, 11];
-/** Momen paling puncak di malam pembukaan: sambutan & pemukulan goong. */
-export const PUNCAK_HARI_1_MALAM = [9];
-
-/** Hari kedua — hari Pasanggiri Jaipong. */
+/** Hari pertama (30 Des) — hari Pasanggiri Jaipong. */
 export const RUNDOWN_HARI_2: BarisRundown[] = [
   { time: "08.00 – 09.00", activity: "Registrasi Ulang Peserta Pasanggiri Jaipong", location: "Meja Registrasi" },
   { time: "09.00", activity: "Open Gate", location: "Main Gate" },
@@ -109,11 +56,11 @@ export const RUNDOWN_HARI_2: BarisRundown[] = [
   { time: "19.00 – 20.00", activity: "Pengumuman Pemenang & Penobatan Duta Pasar Seni", location: "Main Stage" },
   { time: "20.00 – 21.00", activity: "Musik Akustik & Panggung Komunitas", location: "Main Stage" },
   { time: "21.00 – 22.00", activity: "Malam Apresiasi Karya", location: "Main Stage" },
-  { time: "22.00", activity: "Penutupan Hari Kedua", location: "—" },
+  { time: "22.00", activity: "Penutupan Hari Pertama", location: "—" },
 ];
 export const SOROTAN_HARI_2 = [0, 3, 5, 10];
 
-/** Hari ketiga, sesi pagi — seni Sunda, talkshow UMKM, lalu penganugerahan. */
+/** Hari kedua (31 Des), sesi pagi — seni Sunda, talkshow UMKM, lalu penganugerahan. */
 export const RUNDOWN_HARI_3_PAGI: BarisRundown[] = [
   { time: "09.00",             activity: "Open Gate",                                  location: "Main Gate"     },
   { time: "09.00 – 22.00",     activity: "Operasional UMKM & Pasar Seni",               location: "Seluruh Area"  },
@@ -135,7 +82,7 @@ export const SOROTAN_HARI_3_PAGI = [2, 4, 9, 10];
 /** Momen paling puncak di sesi pagi: penganugerahan. */
 export const PUNCAK_HARI_3_PAGI = [13];
 
-/** Hari ketiga, sesi malam — penutup tahun dengan tarian pemenang & kesenian Sunda. */
+/** Hari kedua (31 Des), sesi malam — penutup tahun dengan tarian pemenang & kesenian Sunda. */
 export const RUNDOWN_HARI_3_MALAM: BarisRundown[] = [
   { time: "19.30 – 19.50", activity: "Bubuka Karinding — Saduli Ragap",    location: "Main Stage"    },
   { time: "19.50 – 20.10", activity: "Tarawangsa — Saduli Ragap",          location: "Main Stage"    },

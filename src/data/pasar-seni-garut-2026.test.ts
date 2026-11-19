@@ -9,44 +9,39 @@ import {
   tanggalRentang,
 } from "./pasar-seni-garut-2026";
 
-// Pemilik: Pasar Seni Garut 2026 digelar 29, 30, 31 Desember 2026.
+// Pemilik: Pasar Seni Garut 2026 digelar 30 dan 31 Desember 2026 saja.
 describe("tanggal acara", () => {
-  it("mulai 29 dan selesai 31 Desember 2026", () => {
-    expect(PSG26.tanggalMulai).toBe("2026-12-29");
+  it("mulai 30 dan selesai 31 Desember 2026", () => {
+    expect(PSG26.tanggalMulai).toBe("2026-12-30");
     expect(PSG26.tanggalSelesai).toBe("2026-12-31");
-    expect(tanggalRentang()).toBe("29–31 Desember 2026");
+    expect(tanggalRentang()).toBe("30–31 Desember 2026");
   });
 
-  it("hari pertama Selasa, 29 Desember 2026", () => {
-    expect(tanggalPanjang()).toBe("Selasa, 29 Desember 2026");
+  it("hari pertama Rabu, 30 Desember 2026", () => {
+    expect(tanggalPanjang()).toBe("Rabu, 30 Desember 2026");
   });
 
-  it("tiga hari dengan nama hari Selasa / Rabu / Kamis", () => {
+  it("dua hari: Rabu 30 dan Kamis 31 Desember 2026", () => {
     const hari = daftarHari();
-    expect(hari).toHaveLength(3);
+    expect(hari).toHaveLength(2);
     expect(hari.map((h) => h.tanggalPanjang)).toEqual([
-      "Selasa, 29 Desember 2026",
       "Rabu, 30 Desember 2026",
       "Kamis, 31 Desember 2026",
     ]);
-    expect(hari.map((h) => h.tanggalISO)).toEqual([
-      "2026-12-29",
-      "2026-12-30",
-      "2026-12-31",
-    ]);
+    expect(hari.map((h) => h.tanggalISO)).toEqual(["2026-12-30", "2026-12-31"]);
   });
 });
 
 describe("hitung mundur", () => {
-  const target = new Date(2026, 11, 29, 0, 0, 0, 0);
+  const target = new Date(2026, 11, 30, 0, 0, 0, 0);
 
   it("tepat 10 hari sebelum: 10 hari 0 jam 0 menit 0 detik", () => {
-    const s = sisaWaktu(target, new Date(2026, 11, 19, 0, 0, 0, 0));
+    const s = sisaWaktu(target, new Date(2026, 11, 20, 0, 0, 0, 0));
     expect(s).toEqual({ hari: 10, jam: 0, menit: 0, detik: 0, lewat: false });
   });
 
   it("satu detik sebelum: tidak pernah minus", () => {
-    const s = sisaWaktu(target, new Date(2026, 11, 28, 23, 59, 59, 0));
+    const s = sisaWaktu(target, new Date(2026, 11, 29, 23, 59, 59, 0));
     expect(s).toEqual({ hari: 0, jam: 0, menit: 0, detik: 1, lewat: false });
   });
 
@@ -56,17 +51,17 @@ describe("hitung mundur", () => {
   });
 
   it("28 hari 7 jam 6 menit 5 detik", () => {
-    const s = sisaWaktu(target, new Date(2026, 10, 30, 16, 53, 55, 0));
+    const s = sisaWaktu(target, new Date(2026, 11, 1, 16, 53, 55, 0));
     expect(s).toEqual({ hari: 28, jam: 7, menit: 6, detik: 5, lewat: false });
   });
 });
 
 describe("status acara", () => {
   it("sebelum hari pertama: coming-soon", () => {
-    expect(statusAcara(new Date(2026, 11, 28, 23, 59, 59, 0))).toBe("coming-soon");
+    expect(statusAcara(new Date(2026, 11, 29, 23, 59, 59, 0))).toBe("coming-soon");
   });
   it("hari pertama: berlangsung", () => {
-    expect(statusAcara(new Date(2026, 11, 29, 0, 0, 0, 0))).toBe("berlangsung");
+    expect(statusAcara(new Date(2026, 11, 30, 0, 0, 0, 0))).toBe("berlangsung");
   });
   it("hari terakhir: berlangsung", () => {
     expect(statusAcara(new Date(2026, 11, 31, 23, 59, 59, 0))).toBe("berlangsung");
@@ -78,8 +73,8 @@ describe("status acara", () => {
 
 describe("file kalender", () => {
   const ics = berkasKalender();
-  it("all-day 29 Desember 2026 sampai 1 Januari 2027 (batas eksklusif)", () => {
-    expect(ics).toContain("DTSTART;VALUE=DATE:20261229");
+  it("all-day 30 Desember 2026 sampai 1 Januari 2027 (batas eksklusif)", () => {
+    expect(ics).toContain("DTSTART;VALUE=DATE:20261230");
     expect(ics).toContain("DTEND;VALUE=DATE:20270101");
   });
   it("berjudul Pasar Seni Garut 2026 dan tertutup rapi", () => {

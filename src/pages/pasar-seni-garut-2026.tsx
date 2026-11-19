@@ -12,10 +12,10 @@ import {
   tanggalRentang,
 } from "@/data/pasar-seni-garut-2026";
 
-const TARGET = new Date(2026, 11, 29, 0, 0, 0, 0);
+const TARGET = new Date(2026, 11, 30, 0, 0, 0, 0);
 
 const PESAN_WA =
-  "Halo Nempo, saya mau tanya soal Pasar Seni Garut 2026 (29–31 Desember 2026). " +
+  "Halo Nempo, saya mau tanya soal Pasar Seni Garut 2026 (30–31 Desember 2026). " +
   "Boleh info terbaru soal tempat, jam, dan cara ikut (UMKM / lapak / pengunjung)?";
 
 function HitungMundur() {
@@ -84,7 +84,7 @@ export default function PasarSeniGarut2026Page() {
     <Layout minimalChrome hideBottomNav>
       <SEO
         title="Pasar Seni Garut 2026 — Segera"
-        description="Pasar Seni Garut 2026 segera hadir: 29, 30, 31 Desember 2026 di Garut, Jawa Barat. Detail acara diumumkan menyusul."
+        description="Pasar Seni Garut 2026 segera hadir: 30 dan 31 Desember 2026 di Garut, Jawa Barat. Detail acara diumumkan menyusul."
         path={PSG26.halaman}
         image="/media/pasar-seni-garut/cover-hero.webp"
       />

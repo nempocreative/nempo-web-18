@@ -7,8 +7,8 @@ const publicImage = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 export const PSG26 = {
   nama: "Pasar Seni Garut",
   tahun: "2026",
-  tagline: "Tiga hari di pasar, seribu karya dari Garut.",
-  tanggalMulai: "2026-12-29",
+  tagline: "Dua hari di pasar, seribu karya dari Garut.",
+  tanggalMulai: "2026-12-30",
   tanggalSelesai: "2026-12-31",
   lokasiUmum: "Garut, Jawa Barat",
   lokasiSpesifik: "Tempat pasti masih disusun",
@@ -46,14 +46,14 @@ function labelTanggal(dari: Date): string {
   return `${HARI[dari.getDay()]}, ${dari.getDate()} ${BULAN[dari.getMonth()]} ${dari.getFullYear()}`;
 }
 
-/** "Selasa, 29 Desember 2026" — dipakai di hero dan kartu hari. */
+/** "Rabu, 30 Desember 2026" — dipakai di hero dan kartu hari. */
 export function tanggalPanjang(): string {
-  return labelTanggal(new Date(2026, 11, 29));
+  return labelTanggal(new Date(2026, 11, 30));
 }
 
-/** Rentang singkat: "29–31 Desember 2026". */
+/** Rentang singkat: "30–31 Desember 2026". */
 export function tanggalRentang(): string {
-  return "29–31 Desember 2026";
+  return "30–31 Desember 2026";
 }
 
 export type HariAcara = {
@@ -65,25 +65,19 @@ export type HariAcara = {
   belumPasti: boolean;
 };
 
-/** Tiga hari acara dengan nama hari yang benar (29 Des 2026 = Selasa). */
+/** Dua hari acara dengan nama hari yang benar (30 Des 2026 = Rabu). */
 export function daftarHari(): HariAcara[] {
   const hari = [
     {
       urut: 1,
-      tanggalISO: "2026-12-29",
+      tanggalISO: "2026-12-30",
       labelHari: "Hari ke-1",
-      suasana: "Gerbang dibuka: pasar UMKM, kampung kuliner, dan lapak kriya mulai ramai.",
+      suasana: "Gerbang dibuka: Pasanggiri Jaipong, pasar UMKM, dan kampung kuliner mulai ramai.",
     },
     {
       urut: 2,
-      tanggalISO: "2026-12-30",
-      labelHari: "Hari ke-2",
-      suasana: "Panggung warisan dan kaulinan barudak jadi pusat kumpul keluarga.",
-    },
-    {
-      urut: 3,
       tanggalISO: "2026-12-31",
-      labelHari: "Hari ke-3",
+      labelHari: "Hari ke-2",
       suasana: "Penutup pasar: koin Nempo ditukar, karya sisa lapak dipajang terakhir.",
     },
   ];
@@ -97,9 +91,9 @@ export function daftarHari(): HariAcara[] {
   });
 }
 
-/** Status acara: sebelum hari pertama, selama tiga hari, atau sesudahnya. */
+/** Status acara: sebelum hari pertama, selama dua hari, atau sesudahnya. */
 export function statusAcara(hariIni: Date = new Date()): StatusAcara {
-  const mulai = new Date(2026, 11, 29, 0, 0, 0, 0).getTime();
+  const mulai = new Date(2026, 11, 30, 0, 0, 0, 0).getTime();
   const akhir = new Date(2026, 11, 31, 23, 59, 59, 999).getTime();
   const t = hariIni.getTime();
   if (t < mulai) return "coming-soon";
@@ -107,7 +101,7 @@ export function statusAcara(hariIni: Date = new Date()): StatusAcara {
   return "selesai";
 }
 
-/** Isi file .ics "simpan tanggal" — all-day, 29–31 Desember 2026. */
+/** Isi file .ics "simpan tanggal" — all-day, 30–31 Desember 2026. */
 export function berkasKalender(): string {
   const baris = [
     "BEGIN:VCALENDAR",
@@ -118,10 +112,10 @@ export function berkasKalender(): string {
     "BEGIN:VEVENT",
     "UID:pasar-seni-garut-2026@nempogarut.com",
     "DTSTAMP:20260101T000000Z",
-    "DTSTART;VALUE=DATE:20261229",
+    "DTSTART;VALUE=DATE:20261230",
     "DTEND;VALUE=DATE:20270101",
     "SUMMARY:Pasar Seni Garut 2026",
-    "DESCRIPTION:Tiga hari pasar seni, UMKM, dan budaya di Garut. Detail tempat dan jam menyusul.",
+    "DESCRIPTION:Dua hari pasar seni, UMKM, dan budaya di Garut. Detail tempat dan jam menyusul.",
     "LOCATION:Garut\\, Jawa Barat",
     "END:VEVENT",
     "END:VCALENDAR",

@@ -24,14 +24,14 @@ export const PROGRAM_NEMPO: ProgramNempo[] = [
     judul: "Pasar Seni Garut 2026",
     tagline: "Karya dari Pasar Rakyat — Dari Tradisi Lahir Karya",
     ringkas:
-      "Kegiatan UMKM, budaya, dan komunitas yang rutin digelar setiap bulan, menghidupkan lagi suasana pasar rakyat tempo dulu: kuliner tradisional, kaulinan barudak, panggung seni, Pasanggiri Jaipong se-Jawa Barat, dan produk kreatif lokal Garut. Edisi 29–31 Desember 2026 menjadi penutup tahun.",
+      "Kegiatan UMKM, budaya, dan komunitas yang rutin digelar setiap bulan, menghidupkan lagi suasana pasar rakyat tempo dulu: kuliner tradisional, kaulinan barudak, panggung seni, Pasanggiri Jaipong se-Jawa Barat, dan produk kreatif lokal Garut. Edisi 30–31 Desember 2026 menjadi penutup tahun.",
     mitra: "Nempo Garut",
     tahun: "2026",
     lokasi: "Garut, Jawa Barat",
     sampul: "/media/pasar-seni-garut/cover-hero.webp",
     jumlahSlide: PASAR_SENI_SLIDES.length,
     terkunci: true,
-    sorotan: ["Rutin setiap bulan", "Pasar UMKM & Kampung Kuliner", "Pasanggiri Jaipong & Duta Pasar Seni", "Rundown 29–31 Desember"],
+    sorotan: ["Rutin setiap bulan", "Pasar UMKM & Kampung Kuliner", "Pasanggiri Jaipong & Duta Pasar Seni", "Rundown 30–31 Desember"],
   },
   {
     slug: "garut-beans",
