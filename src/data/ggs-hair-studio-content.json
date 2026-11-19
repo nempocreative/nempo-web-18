@@ -21,7 +21,7 @@
       "audience": "pria",
       "featured": true,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/men-cut-service.jpg"
+      "imageUrl": "/ggs-hair-studio/men-kids-cut-service.jpg"
     },
     {
       "id": 2,
@@ -47,7 +47,7 @@
       "audience": "pria",
       "featured": true,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/men-cut-service.jpg"
+      "imageUrl": "/ggs-hair-studio/men-shave-service.jpg"
     },
     {
       "id": 4,
@@ -73,7 +73,7 @@
       "audience": "pria",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/men-wash-service.jpg"
+      "imageUrl": "/ggs-hair-studio/men-creambath-service.jpg"
     },
     {
       "id": 6,
@@ -86,7 +86,7 @@
       "audience": "pria",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/men-cut-service.jpg"
+      "imageUrl": "/ggs-hair-studio/men-shave-service.jpg"
     },
     {
       "id": 7,
@@ -99,7 +99,7 @@
       "audience": "pria",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/men-cut-service.jpg"
+      "imageUrl": "/ggs-hair-studio/men-shave-service.jpg"
     },
     {
       "id": 8,
@@ -112,7 +112,7 @@
       "audience": "pria",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/men-cut-service.jpg"
+      "imageUrl": "/ggs-hair-studio/men-facial-service.jpg"
     },
     {
       "id": 9,
@@ -125,7 +125,7 @@
       "audience": "pria",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/men-cut-service.jpg"
+      "imageUrl": "/ggs-hair-studio/men-facial-service.jpg"
     },
     {
       "id": 10,
@@ -138,7 +138,7 @@
       "audience": "pria",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/men-cut-service.jpg"
+      "imageUrl": "/ggs-hair-studio/men-facial-service.jpg"
     },
     {
       "id": 11,
@@ -151,7 +151,7 @@
       "audience": "pria",
       "featured": true,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/men-wash-service.jpg"
+      "imageUrl": "/ggs-hair-studio/men-creambath-service.jpg"
     },
     {
       "id": 12,
@@ -294,7 +294,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-editorial.jpg"
+      "imageUrl": "/ggs-hair-studio/women-nail-service.jpg"
     },
     {
       "id": 23,
@@ -307,7 +307,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-editorial.jpg"
+      "imageUrl": "/ggs-hair-studio/women-nail-service.jpg"
     },
     {
       "id": 24,
@@ -320,7 +320,7 @@
       "audience": "wanita",
       "featured": true,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-editorial.jpg"
+      "imageUrl": "/ggs-hair-studio/women-nail-service.jpg"
     },
     {
       "id": 25,
@@ -333,7 +333,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-editorial.jpg"
+      "imageUrl": "/ggs-hair-studio/women-nail-service.jpg"
     },
     {
       "id": 26,
@@ -346,7 +346,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-editorial.jpg"
+      "imageUrl": "/ggs-hair-studio/women-nail-service.jpg"
     },
     {
       "id": 27,
@@ -359,7 +359,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-editorial.jpg"
+      "imageUrl": "/ggs-hair-studio/women-nail-service.jpg"
     },
     {
       "id": 28,
@@ -372,7 +372,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-editorial.jpg"
+      "imageUrl": "/ggs-hair-studio/women-nail-service.jpg"
     },
     {
       "id": 29,
@@ -385,7 +385,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-editorial.jpg"
+      "imageUrl": "/ggs-hair-studio/women-nail-service.jpg"
     },
     {
       "id": 30,
@@ -398,7 +398,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-editorial.jpg"
+      "imageUrl": "/ggs-hair-studio/women-nail-service.jpg"
     },
     {
       "id": 31,
@@ -411,7 +411,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-editorial.jpg"
+      "imageUrl": "/ggs-hair-studio/women-menipedi-service.jpg"
     },
     {
       "id": 32,
@@ -424,7 +424,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-editorial.jpg"
+      "imageUrl": "/ggs-hair-studio/women-nail-service.jpg"
     },
     {
       "id": 33,
@@ -437,7 +437,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-editorial.jpg"
+      "imageUrl": "/ggs-hair-studio/women-nail-service.jpg"
     },
     {
       "id": 34,
@@ -450,7 +450,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-editorial.jpg"
+      "imageUrl": "/ggs-hair-studio/women-nail-service.jpg"
     },
     {
       "id": 35,
@@ -463,7 +463,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-consultation.jpg"
+      "imageUrl": "/ggs-hair-studio/women-blow-service.jpg"
     },
     {
       "id": 36,
@@ -476,7 +476,7 @@
       "audience": "wanita",
       "featured": true,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-blow-service.jpg"
     },
     {
       "id": 37,
@@ -489,7 +489,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-keratin-service.jpg"
     },
     {
       "id": 38,
@@ -502,7 +502,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-keratin-service.jpg"
     },
     {
       "id": 39,
@@ -515,7 +515,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-blow-service.jpg"
     },
     {
       "id": 40,
@@ -528,7 +528,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-blow-service.jpg"
     },
     {
       "id": 41,
@@ -541,7 +541,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-blow-service.jpg"
     },
     {
       "id": 42,
@@ -554,7 +554,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-keratin-service.jpg"
     },
     {
       "id": 43,
@@ -567,7 +567,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-keratin-service.jpg"
     },
     {
       "id": 44,
@@ -580,7 +580,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-keratin-service.jpg"
     },
     {
       "id": 45,
@@ -593,7 +593,7 @@
       "audience": "wanita",
       "featured": true,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-consultation.jpg"
+      "imageUrl": "/ggs-hair-studio/women-cut-service.jpg"
     },
     {
       "id": 46,
@@ -606,7 +606,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-consultation.jpg"
+      "imageUrl": "/ggs-hair-studio/women-cut-service.jpg"
     },
     {
       "id": 47,
@@ -619,7 +619,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-keratin-service.jpg"
     },
     {
       "id": 48,
@@ -632,7 +632,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-cut-service.jpg"
     },
     {
       "id": 49,
@@ -645,7 +645,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-cut-service.jpg"
     },
     {
       "id": 50,
@@ -658,7 +658,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-color-service.jpg"
     },
     {
       "id": 51,
@@ -671,7 +671,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-color-service.jpg"
     },
     {
       "id": 52,
@@ -684,7 +684,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-color-service.jpg"
     },
     {
       "id": 53,
@@ -697,7 +697,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-color-service.jpg"
     },
     {
       "id": 54,
@@ -710,7 +710,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-color-service.jpg"
     },
     {
       "id": 55,
@@ -723,7 +723,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-color-service.jpg"
     },
     {
       "id": 56,
@@ -736,7 +736,7 @@
       "audience": "wanita",
       "featured": true,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-color-service.jpg"
     },
     {
       "id": 57,
@@ -749,7 +749,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-color-service.jpg"
     },
     {
       "id": 58,
@@ -762,7 +762,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-color-service.jpg"
     },
     {
       "id": 59,
@@ -775,7 +775,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-creambath-service.jpg"
     },
     {
       "id": 60,
@@ -788,7 +788,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-creambath-service.jpg"
     },
     {
       "id": 61,
@@ -801,7 +801,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-creambath-service.jpg"
     },
     {
       "id": 62,
@@ -814,7 +814,7 @@
       "audience": "wanita",
       "featured": true,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-creambath-service.jpg"
     },
     {
       "id": 63,
@@ -827,7 +827,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-creambath-service.jpg"
     },
     {
       "id": 64,
@@ -840,7 +840,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-creambath-service.jpg"
     },
     {
       "id": 65,
@@ -853,7 +853,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-creambath-service.jpg"
     },
     {
       "id": 66,
@@ -866,7 +866,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-creambath-service.jpg"
     },
     {
       "id": 67,
@@ -879,7 +879,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-creambath-service.jpg"
     },
     {
       "id": 68,
@@ -892,7 +892,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-creambath-service.jpg"
     },
     {
       "id": 69,
@@ -905,7 +905,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-keratin-service.jpg"
     },
     {
       "id": 70,
@@ -918,7 +918,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-keratin-service.jpg"
     },
     {
       "id": 71,
@@ -931,7 +931,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-keratin-service.jpg"
     },
     {
       "id": 72,
@@ -944,7 +944,7 @@
       "audience": "wanita",
       "featured": true,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-keratin-service.jpg"
     },
     {
       "id": 73,
@@ -957,7 +957,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-keratin-service.jpg"
     },
     {
       "id": 74,
@@ -970,7 +970,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-style.jpg"
+      "imageUrl": "/ggs-hair-studio/women-keratin-service.jpg"
     },
     {
       "id": 75,
@@ -983,7 +983,7 @@
       "audience": "wanita",
       "featured": true,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 76,
@@ -996,7 +996,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 77,
@@ -1009,7 +1009,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 78,
@@ -1022,7 +1022,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 79,
@@ -1035,7 +1035,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-face-service.jpg"
     },
     {
       "id": 80,
@@ -1048,7 +1048,7 @@
       "audience": "wanita",
       "featured": true,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-menipedi-service.jpg"
     },
     {
       "id": 81,
@@ -1061,7 +1061,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-menipedi-service.jpg"
     },
     {
       "id": 82,
@@ -1074,7 +1074,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-menipedi-service.jpg"
     },
     {
       "id": 83,
@@ -1087,7 +1087,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-body-service.jpg"
     },
     {
       "id": 84,
@@ -1100,7 +1100,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-body-service.jpg"
     },
     {
       "id": 85,
@@ -1113,7 +1113,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-body-service.jpg"
     },
     {
       "id": 86,
@@ -1126,7 +1126,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-body-service.jpg"
     },
     {
       "id": 87,
@@ -1139,7 +1139,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-body-service.jpg"
     },
     {
       "id": 88,
@@ -1152,7 +1152,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-body-service.jpg"
     },
     {
       "id": 89,
@@ -1165,7 +1165,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-body-service.jpg"
     },
     {
       "id": 90,
@@ -1178,7 +1178,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 91,
@@ -1191,7 +1191,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 92,
@@ -1204,7 +1204,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 93,
@@ -1217,7 +1217,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 94,
@@ -1230,7 +1230,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-body-service.jpg"
     },
     {
       "id": 95,
@@ -1243,7 +1243,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-body-service.jpg"
     },
     {
       "id": 96,
@@ -1256,7 +1256,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-body-service.jpg"
     },
     {
       "id": 97,
@@ -1269,7 +1269,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 98,
@@ -1282,7 +1282,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 99,
@@ -1295,7 +1295,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 100,
@@ -1308,7 +1308,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 101,
@@ -1321,7 +1321,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 102,
@@ -1334,7 +1334,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 103,
@@ -1347,7 +1347,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 104,
@@ -1360,7 +1360,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-massage-service.jpg"
     },
     {
       "id": 105,
@@ -1373,7 +1373,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-kids-service.jpg"
     },
     {
       "id": 106,
@@ -1386,7 +1386,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-nail-service.jpg"
     },
     {
       "id": 107,
@@ -1399,7 +1399,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-kids-service.jpg"
     },
     {
       "id": 108,
@@ -1412,7 +1412,7 @@
       "audience": "wanita",
       "featured": false,
       "active": true,
-      "imageUrl": "/ggs-hair-studio/ggs-carousel-care.jpg"
+      "imageUrl": "/ggs-hair-studio/women-kids-service.jpg"
     }
   ],
   "products": [

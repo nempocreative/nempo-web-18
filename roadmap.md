@@ -1,5 +1,8 @@
 # Roadmap
 
+- [x] GGS Pricelist: foto AI wajah Indonesia sesuai tiap layanan pria & wanita, judul "Pricelist", bangun ulang situs GGS
+- [ ] Semua halaman rapi dan responsif di HP, tablet, dan komputer: jarak rapi, tidak ada yang menimpa
+
 - [ ] Pasar Seni: lengkapi paket sponsor dengan perbandingan manfaat, kuota promosi, aktivasi 3 hari, dan batas kerja sama.
 
 - [x] Pasar Seni: RAB tiga hari memakai angka luar kurung, tenda 450.000 × 25 × 3, dan usulan pendanaan sponsor yang sesuai total; 229 tes lulus, slide diperiksa di HP dan komputer.

@@ -59,18 +59,32 @@ export const minutesIn = (...texts: (string | undefined)[]) => {
   return 0;
 };
 
-const photo = (audience: GgsAudience, name: string, category: string) => {
-  const t = `${name} ${category}`.toLowerCase();
+// Each service shows the AI photo (Indonesian faces, from pricelist-photos/) that matches it.
+export const photo = (audience: GgsAudience, name: string, category: string) => {
+  const n = name.toLowerCase();
+  const c = category.toLowerCase();
   if (audience === "pria") {
-    if (/colou?r|highlight|warna/.test(t)) return "men-color-service.jpg";
-    if (/keramas|creambath|cuci/.test(t)) return "men-wash-service.jpg";
-    if (/perming|keratin|styling/.test(t)) return "men-styling-service.jpg";
+    if (/paket/.test(c)) return "men-cut-service.jpg";
+    if (/colou?r|highlight|warna/.test(n)) return "men-color-service.jpg";
+    if (/perming|keratin|styling/.test(n)) return "men-styling-service.jpg";
+    if (/creambath|keramas/.test(n)) return "men-creambath-service.jpg";
+    if (/pijat|masker|facial/.test(n)) return "men-facial-service.jpg";
+    if (/kumis|jenggot|botak|licin/.test(n)) return "men-shave-service.jpg";
+    if (/anak|pelajar/.test(n)) return "men-kids-cut-service.jpg";
     return "men-cut-service.jpg";
   }
-  if (/colou?r|highlight|keratin|blow|catok|curly/.test(t)) return "ggs-carousel-style.jpg";
-  if (/creambath|treatment|massage|masker|body|bekam|lulur|waxing|reflex|totok|ratus|meni|pedicure/.test(t)) return "ggs-carousel-care.jpg";
-  if (/potong|cuci/.test(t)) return "ggs-carousel-consultation.jpg";
-  return "ggs-editorial.jpg";
+  if (/nail/.test(c) && /kaki/.test(n)) return "women-menipedi-service.jpg";
+  if (/nail|kuku/.test(c + " " + n)) return "women-nail-service.jpg";
+  if (/anak/.test(c)) return "women-kids-service.jpg";
+  if (/menipedi|manicure|pedicure/.test(c + " " + n)) return "women-menipedi-service.jpg";
+  if (/massage|reflex|pijat|bekam|kerok/.test(c + " " + n)) return "women-massage-service.jpg";
+  if (/face|wajah/.test(c + " " + n)) return "women-face-service.jpg";
+  if (/body|ratus|waxing|lulur|scrub|ketiak|badan/.test(c + " " + n)) return "women-body-service.jpg";
+  if (/creambath|treatment|masker/.test(c + " " + n) && !/keratin/.test(c)) return "women-creambath-service.jpg";
+  if (/colou?r|highlight|warna/.test(c)) return "women-color-service.jpg";
+  if (/keratin|catok/.test(c + " " + n)) return "women-keratin-service.jpg";
+  if (/blow|curly|cuci/.test(n) && !/potong/.test(n)) return "women-blow-service.jpg";
+  return "women-cut-service.jpg";
 };
 
 export function servicesFromPricelists(pria: PricelistSection[], wanita: PricelistSection[], imageBase = "/ggs-hair-studio/") {
