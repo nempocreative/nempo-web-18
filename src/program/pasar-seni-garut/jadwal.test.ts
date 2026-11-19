@@ -4,6 +4,8 @@ import { describe, expect, it } from "vitest";
 import { PROGRAM_NEMPO } from "@/data/program";
 import {
   HARI_ACARA,
+  HARI_PERSIAPAN,
+  RUNDOWN_PERSIAPAN,
   KADENSI,
   RUNDOWN_HARI_2,
   RUNDOWN_HARI_3_MALAM,
@@ -16,7 +18,15 @@ import {
 const kegiatan = (rows: { activity: string }[]) => rows.map((r) => r.activity).join(" | ");
 
 describe("Pasar Seni Garut 2026 schedule", () => {
-  // Owner rule: the event runs only 30 and 31 December 2026 (no opening day on the 29th).
+  // Owner rule: 29 December is preparation only (tenant registration, technical meeting), not part of the event.
+  it("29 December is a preparation day with the Pasanggiri technical meeting, not an event day", () => {
+    expect(HARI_PERSIAPAN).toBe("Selasa, 29 Desember 2026");
+    expect(Object.values(HARI_ACARA)).not.toContain(HARI_PERSIAPAN);
+    expect(RUNDOWN_PERSIAPAN.find((r) => r.activity === "Technical Meeting Pasanggiri")?.time).toBe("09.00 – 12.00");
+    expect(RUNDOWN_PERSIAPAN.some((r) => /Band|Opening|Pasanggiri Jaipong/.test(r.activity))).toBe(false);
+  });
+
+  // Owner rule: the event itself runs only 30 and 31 December 2026.
   it("runs 30–31 December 2026", () => {
     expect(TANGGAL_ACARA).toBe("30–31 Desember 2026");
     expect(HARI_ACARA).toEqual({
@@ -57,7 +67,7 @@ describe("Pasar Seni Garut 2026 schedule", () => {
   });
 
   it("every ranged row in every rundown has a positive duration", () => {
-    for (const rows of [RUNDOWN_HARI_2, RUNDOWN_HARI_3_PAGI, RUNDOWN_HARI_3_MALAM]) {
+    for (const rows of [RUNDOWN_PERSIAPAN, RUNDOWN_HARI_2, RUNDOWN_HARI_3_PAGI, RUNDOWN_HARI_3_MALAM]) {
       for (const r of rows) {
         const m = menitDurasi(r.time);
         if (m !== null) expect(m, r.time).toBeGreaterThan(0);

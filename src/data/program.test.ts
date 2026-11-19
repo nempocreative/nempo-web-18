@@ -10,7 +10,7 @@ describe("program Nempo", () => {
   });
 
   it("the listed slide count matches the deck including finance and sponsor benefits", () => {
-    expect(manifest.length).toBe(46);
+    expect(manifest.length).toBe(47);
     expect(cariProgram("pasar-seni-garut")?.jumlahSlide).toBe(manifest.length);
   });
 

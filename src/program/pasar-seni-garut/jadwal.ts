@@ -1,5 +1,6 @@
 /**
- * Tanggal dan rundown proposal Pasar Seni Garut 2026 — dua hari, 30–31 Desember.
+ * Tanggal dan rundown proposal Pasar Seni Garut 2026 — acara dua hari, 30–31 Desember.
+ * 29 Desember hanya hari persiapan (bukan acara, belum dibuka untuk pengunjung).
  * Hari pertama (30 Des) Pasanggiri Jaipong; hari kedua (31 Des) acara puncak, dibagi sesi pagi & malam.
  * Tanggal diambil dari data lomba supaya sama dengan halaman /lomba.
  */
@@ -36,10 +37,22 @@ export const TANGGAL_ACARA = "30–31 Desember 2026";
 /** Kegiatan ini rutin setiap bulan — bukan acara setahun sekali. */
 export const KADENSI = "Rutin setiap bulan";
 
+/** Hari persiapan sebelum acara — bukan bagian acara, tidak dibuka untuk pengunjung. */
+export const HARI_PERSIAPAN = "Selasa, 29 Desember 2026";
+
 export const HARI_ACARA = {
   pasanggiri: PASANGGIRI.tanggal,
   puncak: PASANGGIRI.acaraPuncak,
 } as const;
+
+/** 29 Des — persiapan: registrasi tenant, technical meeting Pasanggiri, penataan area. Belum ada acara untuk pengunjung. */
+export const RUNDOWN_PERSIAPAN: BarisRundown[] = [
+  { time: "08.00 – 09.00", activity: "Registrasi Tenant & Final Briefing",   location: "Area Tenant"     },
+  { time: "09.00 – 12.00", activity: "Technical Meeting Pasanggiri",         location: "Community Stage" },
+  { time: "12.00 – 13.00", activity: "ISHOMA & Sholat Zuhur",                location: "Musala"          },
+  { time: "13.00 – 17.00", activity: "Penataan Area Tenant & Cek Sound",     location: "Seluruh Area"    },
+];
+export const SOROTAN_PERSIAPAN = [0, 1];
 
 /** Hari pertama (30 Des) — hari Pasanggiri Jaipong. */
 export const RUNDOWN_HARI_2: BarisRundown[] = [
