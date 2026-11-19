@@ -12,7 +12,7 @@ const info = [
 export default function SlidePasanggiri1Overview() {
   return (
     <PasanggiriFrame
-      label="Lomba Pasar Seni"
+      label="Road to Pasar Seni 2027"
       judul={<>Pasanggiri Jaipong <span className="pjg-emas">se-Jawa Barat</span></>}
     >
       {(go) => (

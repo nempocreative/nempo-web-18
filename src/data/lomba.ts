@@ -48,7 +48,7 @@ export const lombaList: Lomba[] = [
     slug: "pasanggiri-jaipong",
     judul: "Pasanggiri Jaipong se-Jawa Barat",
     subjudul: "& Pemilihan Duta Pasar Seni",
-    ringkas: "Juara 1 tiap kategori menjadi Duta Pasar Seni dan berkesempatan tampil di acara puncak Pasar Seni.",
+    ringkas: "Road to Pasar Seni 2027. Juara 1 tiap kategori menjadi Duta Pasar Seni dan berkesempatan tampil di acara puncak Pasar Seni.",
     kategori: [
       { id: "tk", nama: "TK", keterangan: "Taman Kanak-kanak" },
       { id: "sd-1-3", nama: "SD 1–3", keterangan: "SD kelas 1 sampai 3" },

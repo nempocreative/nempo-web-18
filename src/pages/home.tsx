@@ -134,7 +134,7 @@ const LOMBA_HERO_SLIDE: HeroBanner = {
   title: "Pasanggiri Jaipong",
   subtitle: "Lomba",
   description: "30 Desember 2026 · TK sampai SMP–SMA · Kuota 25 tiap kategori",
-  category: "Lomba Tari · Pasar Seni Garut 2026",
+  category: "Road to Pasar Seni 2027 · Pasar Seni Garut 2026",
   btn_text: "Daftar lomba",
   link: "/lomba",
   image: posterCarouselLomba,
