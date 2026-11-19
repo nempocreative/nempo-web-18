@@ -25,8 +25,6 @@ export const KLIEN_NEMPO: KlienNempo[] = [
     tautan: "/ggs-hair-studio/",
     pakaiKataSandi: false,
     sorotan: ["Layanan & harga", "Galeri gaya rambut", "Katalog produk", "Tim stylist"],
-    // Owner asked to hide GGS from the list for now; flip to false to show it again.
-    sembunyi: true,
   },
 ];
 

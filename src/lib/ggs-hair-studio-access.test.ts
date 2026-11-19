@@ -18,8 +18,8 @@ describe("GGS Hair Studio access", () => {
     expect(KLIEN_NEMPO.map((k) => k.tautan)).toEqual(["/ggs-hair-studio/"]);
     expect(KLIEN_NEMPO.map((k) => k.pakaiKataSandi)).toEqual([false]);
   });
-  it("keeps hidden clients out of the Client Access list (GGS is hidden for now)", () => {
-    expect(KLIEN_TAMPIL.map((k) => k.slug)).not.toContain("ggs-hair-studio");
+  it("shows GGS Hair Studio on Client Access and keeps hidden clients out", () => {
+    expect(KLIEN_TAMPIL.map((k) => k.slug)).toContain("ggs-hair-studio");
     expect(KLIEN_TAMPIL.every((k) => !k.sembunyi)).toBe(true);
   });
   it("link previews show the GGS share image at the site's own full address", async () => {

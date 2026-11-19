@@ -171,8 +171,8 @@ export default function ClientAccessPage() {
     <Layout>
       <SEO
         title="Client Access — Web Klien Nempo"
-        description="Akses web klien yang dibuat Nempo. Pilih web klienmu di sini."
-        keywords="client access Nempo, web klien Nempo"
+        description="Akses web klien yang dibuat Nempo, seperti GGS Hair Studio."
+        keywords="client access Nempo, web klien Nempo, GGS Hair Studio"
         path="/client-access"
       />
       <main className="min-h-screen bg-slate-50/60 pb-24 text-[#17233a]">
