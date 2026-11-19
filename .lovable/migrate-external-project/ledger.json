@@ -1,0 +1,16 @@
+{
+  "source": "github:nempocreative/nempo-web-17",
+  "capabilities": [
+    {"capability": "code, pages, routes, CMS (/admin, /cms)", "source": "repository", "outcome": "migrate", "status": "in_progress", "next_action": "copy source into project"},
+    {"capability": "static media (public/, src/assets)", "source": "repository", "outcome": "migrate", "status": "in_progress", "next_action": "copy"},
+    {"capability": "media pointers (11 .asset.json)", "source": "source project asset storage", "outcome": "re-upload to this project", "status": "pending", "next_action": "fetch bytes from source and re-upload"},
+    {"capability": "schema (24 tables + lomba_pendaftaran + portfolio_events, has_role, triggers, policies)", "source": "database/nempo-database.sql + docs/schema-baseline 0005/0006 + generated types", "outcome": "migrate", "status": "pending", "next_action": "apply migration in Lovable Cloud"},
+    {"capability": "storage buckets event-posters, yearbook-moments, lomba-pendaftaran", "source": "source Cloud", "outcome": "recreate", "status": "pending", "next_action": "create private buckets with policies"},
+    {"capability": "records", "source": "source Cloud database", "outcome": "migrate", "status": "pending", "next_action": "bundled MusiComedy Night event imported with schema; other rows need owner export"},
+    {"capability": "uploaded files", "source": "source Cloud storage", "outcome": "migrate", "status": "pending", "next_action": "owner exports files"},
+    {"capability": "auth identities / CMS admin", "source": "source Cloud auth (0 accounts per database/README)", "outcome": "allowlisted verified email becomes admin", "status": "pending", "next_action": "owner signs up at /cms"},
+    {"capability": "public endpoints (/api/public/*, /api/$, /api/ggs, /api/backup)", "source": "repository", "outcome": "preserve", "status": "pending", "next_action": "verify after build"},
+    {"capability": "secrets", "source": "only Cloud-managed values found", "outcome": "n/a", "status": "pending", "next_action": "confirm no other env vars in server code"},
+    {"capability": "cutover (domain)", "source": "old host", "outcome": "pending owner", "status": "pending", "next_action": "publish and connect domain when ready"}
+  ]
+}
