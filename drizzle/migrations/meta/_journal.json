@@ -1,5 +1,27 @@
 {
   "version": "7",
   "dialect": "postgresql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1795104457259,
+      "tag": "0000_restore_nempo_rows",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795104489292,
+      "tag": "0001_fix_media_archive_manifest",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795104513706,
+      "tag": "0002_fix_hunting_foto_url",
+      "breakpoints": true
+    }
+  ]
 }
