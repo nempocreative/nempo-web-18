@@ -190,3 +190,4 @@
 - [x] GGS: halaman model rambut pria/wanita hanya model rambut, tautan pricelist di bawah; kedua tautan diperiksa.
 - [x] GGS: booking cowok/cewek, pilihan staf, tanggal, jam, rincian layanan, WhatsApp studio masing-masing; pesan kedua studio diperiksa, 21 tes lulus (pesan belum dikirim ke studio).
 - [x] GGS: ikon tab memakai alamat logo GGS sendiri; ikon menu grid 276 KB → 109 KB (60% lebih ringan), diperiksa utuh di HP.
+- [x] GGS Hair Studio: menu My GGS dihapus dari web GGS (pemilik); kartu GGS di Client Access dikembalikan; diperiksa di HP dan komputer

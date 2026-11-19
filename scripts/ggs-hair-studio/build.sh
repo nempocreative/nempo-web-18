@@ -24,6 +24,7 @@ node "$HERE/patch-booking-models.mjs" "$APP"
 node "$HERE/patch-pricelist.mjs" "$APP"
 node "$HERE/patch-pricelist-pria.mjs" "$APP"
 node "$HERE/patch-swipe.mjs" "$APP"
+node "$HERE/patch-my-ggs.mjs" "$APP"
 cd "$APP"
 PORT=5173 BASE_PATH=/ggs-hair-studio/ NODE_ENV=production npx vite build --config vite.config.ts
 rm -rf "$ROOT/public/ggs-hair-studio"
