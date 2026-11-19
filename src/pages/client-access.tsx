@@ -74,7 +74,7 @@ function KartuKlien({ k, tunggal }: { k: KlienNempo; tunggal: boolean }) {
 function GeserKlien() {
   const jalur = useRef<HTMLDivElement>(null);
   const [aktif, setAktif] = useState(0);
-  const tunggal = KLIEN_NEMPO.length < 2;
+  const tunggal = KLIEN_TAMPIL.length < 2;
 
   useEffect(() => {
     const el = jalur.current;
@@ -110,7 +110,7 @@ function GeserKlien() {
         ref={jalur}
         className={`relative px-4 pb-2 sm:px-6 lg:px-8 ${tunggal ? "" : "scrollbar-hide flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain scroll-px-4 sm:scroll-px-6 lg:scroll-px-8 sm:gap-6 motion-safe:scroll-smooth"}`}
       >
-        {KLIEN_NEMPO.map((k) => (
+        {KLIEN_TAMPIL.map((k) => (
           <KartuKlien key={k.slug} k={k} tunggal={tunggal} />
         ))}
       </div>
@@ -126,7 +126,7 @@ function GeserKlien() {
             <ChevronLeft className="h-5 w-5" />
           </button>
           <div className="flex gap-2">
-            {KLIEN_NEMPO.map((k, i) => (
+            {KLIEN_TAMPIL.map((k, i) => (
               <button
                 key={k.slug}
                 type="button"
@@ -139,8 +139,8 @@ function GeserKlien() {
           </div>
           <button
             type="button"
-            onClick={() => keKartu(Math.min(KLIEN_NEMPO.length - 1, aktif + 1))}
-            disabled={aktif === KLIEN_NEMPO.length - 1}
+            onClick={() => keKartu(Math.min(KLIEN_TAMPIL.length - 1, aktif + 1))}
+            disabled={aktif === KLIEN_TAMPIL.length - 1}
             aria-label="Kartu berikutnya"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-[#17233a] disabled:opacity-40"
           >
