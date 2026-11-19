@@ -21,13 +21,23 @@ s = s.replace(fnAnchor, `function HomeDiscounts() {
   const [today, setToday] = useState<string | null>(null);
   useEffect(() => setToday(jakartaToday()), []);
   const list = today ? activeDiscounts(ggsDiscounts as GgsDiscount[], today) : [];
+  const scrollDeals = (dir: number) => {
+    const row = document.querySelector<HTMLElement>(".ggs-deals__row");
+    if (row) row.scrollBy({ left: dir * Math.max(240, row.clientWidth * 0.8), behavior: "smooth" });
+  };
   if (!list.length) return null;
   return (
     <section className="ggs-deals" aria-labelledby="home-deals-title" data-testid="section-home-discounts">
       <div className="ggs-deals__head">
-        <p className="clearer-kicker">PROMO BERLAKU</p>
-        <h2 id="home-deals-title">Diskon<br /><em>yang sedang aktif.</em></h2>
-        <p>Sobek tiketnya: tekan kartu untuk booking promo langsung lewat WhatsApp studionya.</p>
+        <div className="ggs-deals__head-text">
+          <p className="clearer-kicker">PROMO BERLAKU</p>
+          <h2 id="home-deals-title">Diskon<br /><em>yang sedang aktif.</em></h2>
+          <p>Sobek tiketnya: tekan kartu untuk booking promo langsung lewat WhatsApp studionya.</p>
+        </div>
+        <div className="ggs-deals__nav">
+          <button type="button" className="ggs-deals__arrow" aria-label="Geser daftar diskon ke kiri" onClick={() => scrollDeals(-1)} data-testid="btn-home-discounts-prev">&larr;</button>
+          <button type="button" className="ggs-deals__arrow" aria-label="Geser daftar diskon ke kanan" onClick={() => scrollDeals(1)} data-testid="btn-home-discounts-next">&rarr;</button>
+        </div>
       </div>
       <div className="ggs-deals__row" role="list" aria-label="Diskon aktif">
         {list.map((deal) => (
@@ -68,10 +78,15 @@ const c = fs.readFileSync(css, "utf8");
 if (!c.includes(marker)) fs.writeFileSync(css, c + `
 ${marker}
 .ggs-deals { --deal-bg: #f3ebe0; --deal-paper: #fffaf3; --deal-ink: #2d2520; --deal-line: #c9b9a2; background: var(--deal-bg); padding: 56px var(--ggs-gutter, 20px); }
-.ggs-deals__head { max-width: 1260px; margin: 0 auto 26px; }
+.ggs-deals__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; max-width: 1260px; margin: 0 auto 26px; }
+.ggs-deals__head-text { min-width: 0; }
 .ggs-deals__head h2 { margin: 6px 0 10px; color: var(--deal-ink); font: 500 clamp(34px, 5vw, 52px)/1 'Cormorant Garamond', serif; }
 .ggs-deals__head h2 em { color: var(--clearer-accent, #b0466a); }
-.ggs-deals__head > p:last-child { max-width: 520px; margin: 0; color: #6d6156; font-size: 14px; line-height: 1.55; }
+.ggs-deals__head-text > p:last-child { max-width: 520px; margin: 0; color: #6d6156; font-size: 14px; line-height: 1.55; }
+.ggs-deals__nav { display: none; flex: 0 0 auto; gap: 10px; padding-bottom: 4px; }
+.ggs-deals__arrow { width: 46px; height: 46px; border: 1px solid var(--deal-line); border-radius: 999px; background: var(--deal-paper); color: var(--deal-ink); font: 500 20px/1 'Cormorant Garamond', serif; cursor: pointer; transition: background 200ms ease, color 200ms ease, transform 200ms ease; }
+.ggs-deals__arrow:hover { background: var(--deal-ink); color: var(--deal-paper); transform: translateY(-2px); }
+.ggs-deals__arrow:focus-visible { outline: 2px solid var(--clearer-accent, #b0466a); outline-offset: 3px; }
 .ggs-deals__row { display: flex; gap: 18px; max-width: 1260px; margin: 0 auto; overflow-x: auto; padding: 6px 4px 18px; scroll-snap-type: x mandatory; scroll-padding-inline: 4px; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .ggs-deals__row::-webkit-scrollbar { display: none; }
 .ggs-deal { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 104px; flex: 0 0 min(86vw, 380px); min-height: 178px; scroll-snap-align: start; padding: 0; border: 0; background: none; color: var(--deal-ink); text-align: left; cursor: pointer; filter: drop-shadow(0 10px 14px rgb(55 40 28 / 16%)); transition: transform 220ms ease; font: inherit; }
@@ -100,7 +115,7 @@ ${marker}
 .ggs-deal__pct { font: 600 38px/1 'Cormorant Garamond', serif; }
 .ggs-deal__pct--word { font-size: 17px; letter-spacing: .03em; }
 .ggs-deal__cta { margin-top: 6px; padding: 4px 8px; border: 1px solid currentColor; border-radius: 999px; letter-spacing: .12em !important; }
-@media (min-width: 1100px) { .ggs-deals__row { overflow: visible; flex-wrap: wrap; } .ggs-deal { flex-basis: calc((100% - 36px) / 3); } }
+@media (min-width: 1100px) { .ggs-deals__nav { display: flex; } .ggs-deal { flex-basis: 340px; } }
 @media (max-width: 380px) { .ggs-deal { grid-template-columns: minmax(0, 1fr) 88px; } .ggs-deal__title { font-size: 22px; } .ggs-deal__pct { font-size: 32px; } .ggs-deal__pct--word { font-size: 14px; } }
 @media (prefers-reduced-motion: reduce) { .ggs-deal { transition: none; } .ggs-deal:hover, .ggs-deal:focus-visible { transform: none; } }
 `);
