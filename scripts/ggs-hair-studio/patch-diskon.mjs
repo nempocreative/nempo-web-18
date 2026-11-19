@@ -8,6 +8,8 @@ const app = process.argv[2];
 const here = new URL(".", import.meta.url);
 fs.copyFileSync(new URL("./diskon.ts", here), path.join(app, "src/ggs-diskon.ts"));
 fs.copyFileSync(new URL("./diskon.json", here), path.join(app, "src/ggs-diskon.json"));
+// The same frame-driven scroller the team rows use (patch-team.mjs re-copies the identical file).
+fs.copyFileSync(new URL("./team-autoplay.ts", here), path.join(app, "src/ggs-team-autoplay.ts"));
 const file = path.join(app, "src/App.tsx");
 let s = fs.readFileSync(file, "utf8");
 if (!s.includes("whatsappFor")) throw new Error("patch-diskon: run patch-whatsapp.mjs first");
@@ -21,13 +23,17 @@ s = s.replace(fnAnchor, `function HomeDiscounts() {
   const [today, setToday] = useState<string | null>(null);
   useEffect(() => setToday(jakartaToday()), []);
   const list = today ? activeDiscounts(ggsDiscounts as GgsDiscount[], today) : [];
+  // The row scrolls by itself (owner request); deps re-arms it once the cards actually mount.
+  const dealsRef = useRowAutoplay<HTMLElement>({ rowSelector: ".ggs-deals__row", deps: [list.length] });
   const scrollDeals = (dir: number) => {
     const row = document.querySelector<HTMLElement>(".ggs-deals__row");
-    if (row) row.scrollBy({ left: dir * Math.max(240, row.clientWidth * 0.8), behavior: "smooth" });
+    if (!row) return;
+    row.dispatchEvent(new Event(ROW_AUTOPLAY_PAUSE_EVENT));
+    row.scrollBy({ left: dir * Math.max(240, row.clientWidth * 0.8), behavior: "smooth" });
   };
   if (!list.length) return null;
   return (
-    <section className="ggs-deals" aria-labelledby="home-deals-title" data-testid="section-home-discounts">
+    <section className="ggs-deals" ref={dealsRef} aria-labelledby="home-deals-title" data-testid="section-home-discounts">
       <div className="ggs-deals__head">
         <div className="ggs-deals__head-text">
           <p className="clearer-kicker">PROMO BERLAKU</p>
@@ -40,14 +46,18 @@ s = s.replace(fnAnchor, `function HomeDiscounts() {
         </div>
       </div>
       <div className="ggs-deals__row" role="list" aria-label="Diskon aktif">
-        {list.map((deal) => (
+        {[0, 1].flatMap((copy) => list.map((deal, index) => (
           <button
             type="button"
             role="listitem"
-            key={deal.id}
+            key={\`\${deal.id}-\${copy}\`}
             className={\`ggs-deal ggs-deal--\${deal.audience}\`}
             onClick={() => openGgsWhatsApp(discountWaText(deal), whatsappFor({ audience: deal.audience }))}
-            data-testid={\`card-home-discount-\${deal.id}\`}
+            data-team-index={index}
+            data-team-copy={copy ? '' : undefined}
+            aria-hidden={copy ? true : undefined}
+            tabIndex={copy ? -1 : undefined}
+            data-testid={copy ? undefined : \`card-home-discount-\${deal.id}\`}
           >
             <span className="ggs-deal__main">
               <span className="ggs-deal__studio">{discountStudio(deal).toUpperCase()}</span>
@@ -62,14 +72,14 @@ s = s.replace(fnAnchor, `function HomeDiscounts() {
               <small className="ggs-deal__cta">Booking</small>
             </span>
           </button>
-        ))}
+        )))}
       </div>
     </section>
   );
 }
 
 ${fnAnchor}`);
-s = s.replace("import { useQueryClient }", "import ggsDiscounts from './ggs-diskon.json';\nimport { activeDiscounts, discountEndLabel, discountIsPercent, discountPrice, discountStudio, discountWaText, jakartaToday, type GgsDiscount } from './ggs-diskon';\nimport { useQueryClient }");
+s = s.replace("import { useQueryClient }", "import ggsDiscounts from './ggs-diskon.json';\nimport { activeDiscounts, discountEndLabel, discountIsPercent, discountPrice, discountStudio, discountWaText, jakartaToday, type GgsDiscount } from './ggs-diskon';\nimport { ROW_AUTOPLAY_PAUSE_EVENT, useRowAutoplay } from './ggs-team-autoplay';\nimport { useQueryClient }");
 fs.writeFileSync(file, s);
 
 const css = path.join(app, "src/homepage.css");
@@ -87,9 +97,9 @@ ${marker}
 .ggs-deals__arrow { width: 46px; height: 46px; border: 1px solid var(--deal-line); border-radius: 999px; background: var(--deal-paper); color: var(--deal-ink); font: 500 20px/1 'Cormorant Garamond', serif; cursor: pointer; transition: background 200ms ease, color 200ms ease, transform 200ms ease; }
 .ggs-deals__arrow:hover { background: var(--deal-ink); color: var(--deal-paper); transform: translateY(-2px); }
 .ggs-deals__arrow:focus-visible { outline: 2px solid var(--clearer-accent, #b0466a); outline-offset: 3px; }
-.ggs-deals__row { display: flex; gap: 18px; max-width: 1260px; margin: 0 auto; overflow-x: auto; padding: 6px 4px 18px; scroll-snap-type: x mandatory; scroll-padding-inline: 4px; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.ggs-deals__row { display: flex; gap: 18px; max-width: 1260px; margin: 0 auto; overflow-x: auto; padding: 6px 4px 18px; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .ggs-deals__row::-webkit-scrollbar { display: none; }
-.ggs-deal { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 104px; flex: 0 0 min(86vw, 380px); min-height: 178px; scroll-snap-align: start; padding: 0; border: 0; background: none; color: var(--deal-ink); text-align: left; cursor: pointer; filter: drop-shadow(0 10px 14px rgb(55 40 28 / 16%)); transition: transform 220ms ease; font: inherit; }
+.ggs-deal { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 104px; flex: 0 0 min(86vw, 380px); min-height: 178px; padding: 0; border: 0; background: none; color: var(--deal-ink); text-align: left; cursor: pointer; filter: drop-shadow(0 10px 14px rgb(55 40 28 / 16%)); transition: transform 220ms ease; font: inherit; }
 .ggs-deal:hover, .ggs-deal:focus-visible { transform: translateY(-3px) rotate(-.4deg); }
 .ggs-deal:focus-visible { outline: 2px solid var(--clearer-accent, #b0466a); outline-offset: 4px; }
 /* Paper with round punch-outs where the ticket tears. */

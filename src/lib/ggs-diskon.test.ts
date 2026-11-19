@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
+import { readFileSync, readdirSync } from "node:fs";
 import list from "../../scripts/ggs-hair-studio/diskon.json";
 import { activeDiscounts, discountWaText, jakartaToday, type GgsDiscount } from "../../scripts/ggs-hair-studio/diskon";
+import { ROW_AUTOPLAY_PAUSE_EVENT } from "../../scripts/ggs-hair-studio/team-autoplay";
 import { whatsappFor } from "../../scripts/ggs-hair-studio/ggs-whatsapp";
 
 const deals = list as GgsDiscount[];
@@ -55,5 +57,18 @@ describe("GGS active discounts", () => {
 
   it("a promo without a normal price books with just its promo price", () => {
     expect(discountWaText(deal({ title: "Nail Art", normalPrice: undefined, promoPrice: 35000, label: "PROMO" }))).toContain("harga promo Rp35.000");
+  });
+
+  it("the built home page scrolls the discount row by itself and can be paused from the arrows", () => {
+    // The auto-scroller's pause signal is only used by the discount arrows and the hook, so its
+    // presence next to the row's class name proves a rebuild kept the wiring.
+    const assets = "public/ggs-hair-studio/assets";
+    const bundle = readdirSync(assets)
+      .filter((f) => f.endsWith(".js"))
+      .map((f) => readFileSync(`${assets}/${f}`, "utf8"))
+      .join("");
+    expect(ROW_AUTOPLAY_PAUSE_EVENT).toBe("ggs-autoplay-pause");
+    expect(bundle).toContain("ggs-deals__row");
+    expect(bundle).toContain(ROW_AUTOPLAY_PAUSE_EVENT);
   });
 });

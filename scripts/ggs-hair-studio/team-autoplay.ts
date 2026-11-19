@@ -21,11 +21,17 @@ type RowAutoplayOptions = {
   rowSelector: string;
   /** When set, the card nearest the center gets this class; omit for plain continuous scrolling. */
   featuredClass?: string;
+  /** Re-runs the effect when these change, for rows that mount after the first paint. */
+  deps?: readonly unknown[];
 };
 
+/** Dispatch this event on a row to pause it, e.g. from a button that sits outside the row. */
+export const ROW_AUTOPLAY_PAUSE_EVENT = "ggs-autoplay-pause";
+
 /** Scrolls matching card rows forward forever; pauses on touch/hover/focus and under reduced motion. */
-export function useRowAutoplay<T extends HTMLElement>({ rowSelector, featuredClass }: RowAutoplayOptions) {
+export function useRowAutoplay<T extends HTMLElement>({ rowSelector, featuredClass, deps }: RowAutoplayOptions) {
   const ref = useRef<T | null>(null);
+  const depsKey = JSON.stringify(deps ?? []);
   useEffect(() => {
     const root = ref.current;
     if (!root || typeof window === "undefined") return;
@@ -39,7 +45,7 @@ export function useRowAutoplay<T extends HTMLElement>({ rowSelector, featuredCla
       const pause = () => pausedUntil.set(row, Date.now() + TEAM_AUTOPLAY_PAUSE_MS);
       const hold = () => { held.add(row); pause(); };
       const release = () => { held.delete(row); pause(); };
-      const events: [string, () => void][] = [["pointerdown", pause], ["touchstart", pause], ["wheel", pause], ["mouseenter", hold], ["mouseleave", release], ["focusin", hold], ["focusout", release]];
+      const events: [string, () => void][] = [["pointerdown", pause], ["touchstart", pause], ["wheel", pause], ["mouseenter", hold], ["mouseleave", release], ["focusin", hold], ["focusout", release], [ROW_AUTOPLAY_PAUSE_EVENT, pause]];
       events.forEach(([event, handler]) => row.addEventListener(event, handler, { passive: true }));
       return () => events.forEach(([event, handler]) => row.removeEventListener(event, handler));
     });
@@ -79,7 +85,7 @@ export function useRowAutoplay<T extends HTMLElement>({ rowSelector, featuredCla
     };
     frame = window.requestAnimationFrame(animate);
     return () => { window.cancelAnimationFrame(frame); cleanups.forEach((c) => c()); };
-  }, [rowSelector, featuredClass]);
+  }, [rowSelector, featuredClass, depsKey]);
   return ref;
 }
 
