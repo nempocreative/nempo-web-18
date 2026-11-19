@@ -191,3 +191,5 @@
 - [x] GGS: booking cowok/cewek, pilihan staf, tanggal, jam, rincian layanan, WhatsApp studio masing-masing; pesan kedua studio diperiksa, 21 tes lulus (pesan belum dikirim ke studio).
 - [x] GGS: ikon tab memakai alamat logo GGS sendiri; ikon menu grid 276 KB → 109 KB (60% lebih ringan), diperiksa utuh di HP.
 - [x] GGS Hair Studio: menu My GGS dihapus dari web GGS (pemilik); kartu GGS di Client Access dikembalikan; diperiksa di HP dan komputer
+- [x] GGS Beranda: judul "Pilihan favorit" jadi "Pricelist" di bagian barber pria dan GGS Beauty
+- [ ] GGS Pricelist: foto layanan dibuat ulang dengan AI — wajah Indonesia, tiap foto sesuai layanannya (cukur, catok, kuku, creambath, pijat, pedicure, colouring)

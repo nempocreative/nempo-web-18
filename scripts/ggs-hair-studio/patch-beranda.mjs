@@ -23,11 +23,11 @@ swap("(service) => service.active && homeWomenServiceNames.has(service.name.trim
 
 // Headings name the studio and link to the full price list.
 swap("<p className=\"clearer-kicker\">MEN'S GROOMING</p>", "<p className=\"clearer-kicker\">GGS BARBER STUDIO</p>");
-swap("Layanan pria\n              <br />\n              <em>aktif di GGS.</em>", "Pilihan favorit\n              <br />\n              <em>barber pria.</em>");
+swap("Layanan pria\n              <br />\n              <em>aktif di GGS.</em>", "Pricelist\n              <br />\n              <em>barber pria.</em>");
 swap("<p className=\"home-mens-grooming-intro\">Pilihan layanan pria yang tersedia saat ini, dengan detail durasi dan harga dari GGS.</p>",
   "<p className=\"home-mens-grooming-intro\">Harga dari Pricelist Pria. Booking langsung ke WhatsApp GGS Barber Studio 0813-3335-9200. <Link href=\"/pricelist-pria\" className=\"home-pricelist-link\" data-testid=\"link-home-pricelist-pria\">Lihat pricelist pria lengkap <ArrowRight size={14} aria-hidden=\"true\" /></Link></p>");
 swap("<p className=\"clearer-kicker\">WOMEN'S HAIR &amp; BEAUTY</p>", "<p className=\"clearer-kicker\">GGS BEAUTY</p>");
-swap("Layanan wanita\n              <br />\n              <em>di GGS.</em>", "Pilihan favorit\n              <br />\n              <em>GGS Beauty.</em>");
+swap("Layanan wanita\n              <br />\n              <em>di GGS.</em>", "Pricelist\n              <br />\n              <em>GGS Beauty.</em>");
 swap("<p className=\"home-mens-grooming-intro\">Pilihan potong, warna, perawatan, dan styling rambut wanita, lengkap dengan durasi dan harga.</p>",
   "<p className=\"home-mens-grooming-intro\">Harga dari Pricelist Wanita. Booking langsung ke WhatsApp GGS Beauty 0823-4277-7723. <Link href=\"/pricelist-wanita\" className=\"home-pricelist-link\" data-testid=\"link-home-pricelist-wanita\">Lihat pricelist wanita lengkap <ArrowRight size={14} aria-hidden=\"true\" /></Link></p>");
 
