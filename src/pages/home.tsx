@@ -119,7 +119,7 @@ const PASAR_SENI_HERO_SLIDE: HeroBanner = {
   id: 101,
   title: "Pasar Seni Garut",
   subtitle: "Coming Soon",
-  description: "29 - 30 - 31 Desember 2026 · Garut, Jawa Barat",
+  description: "30 - 31 Desember 2026 · Garut, Jawa Barat",
   category: "Coming Soon",
   btn_text: "Lihat acaranya",
   link: "/pasar-seni-garut-2026",
@@ -1066,7 +1066,7 @@ export default function Home() {
                 Pasar Seni Garut 2026
               </h3>
               <p className="truncate text-[11px] font-semibold text-muted-foreground sm:text-[13px]">
-                29, 30, 31 Desember 2026 · Garut, Jawa Barat
+                30 &amp; 31 Desember 2026 · Garut, Jawa Barat
               </p>
             </div>
             <ChevronRight className="h-4 w-4 shrink-0 text-primary sm:h-5 sm:w-5" />

@@ -18,7 +18,7 @@ const proyeksi = [
 ];
 
 const target = [
-  { item: 'Durasi Event',              val: '3 Hari',        highlight: false },
+  { item: 'Durasi Event',              val: '2 Hari',        highlight: false },
   { item: 'Pengunjung',                val: '10.000 Orang',  highlight: false },
   { item: 'UMKM Terpilih',             val: '50 Tenant',     highlight: false },
   { item: 'Komunitas',                 val: '30 Komunitas',  highlight: false },

@@ -16,6 +16,6 @@ export default function SlideKeuangan4Manfaat() {
         {m.nilai.map((n, i) => <td key={i} className="px-[1cqw] py-[1.3cqh] align-top text-psg-text/85">{n}</td>)}
       </tr>)}</tbody>
     </table>
-    <p className="mt-auto pt-[1.5cqh] text-[1.05cqw] text-psg-text/70">Harga berlaku untuk keseluruhan acara 3 hari, bukan per hari. Kuota promosi adalah usulan per mitra; penempatan dan jadwal mengikuti persetujuan bersama, tanpa mengganggu penampilan atau lomba.</p>
+    <p className="mt-auto pt-[1.5cqh] text-[1.05cqw] text-psg-text/70">Harga berlaku untuk keseluruhan 2 hari acara (30–31 Desember), bukan per hari. Kuota promosi adalah usulan per mitra; penempatan dan jadwal mengikuti persetujuan bersama, tanpa mengganggu penampilan atau lomba.</p>
   </KeuanganFrame>;
 }

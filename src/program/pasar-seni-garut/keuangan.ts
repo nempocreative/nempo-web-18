@@ -18,8 +18,8 @@ export const RAB = [
 export const totalRab = RAB.reduce((total, row) => total + row.biaya, 0);
 export const subtotalRab = (kelompok: 'produksi' | 'operasional') => RAB.filter(row => row.kelompok === kelompok).reduce((total, row) => total + row.biaya, 0);
 export const sponsorUsulan = [
-  { nama: 'Sponsor Utama', jumlah: 1, nilai: 100_000_000, manfaat: 'Identitas utama di panggung, gapura & videotron; aktivasi brand 3 hari; penyebutan MC dan publikasi utama.' },
-  { nama: 'Sponsor Pendukung', jumlah: 2, nilai: 25_000_000, manfaat: 'Logo di materi acara & videotron; area aktivasi sesuai kesepakatan; penyebutan MC selama 3 hari.' },
+  { nama: 'Sponsor Utama', jumlah: 1, nilai: 100_000_000, manfaat: 'Identitas utama di panggung, gapura & videotron; aktivasi brand 2 hari acara; penyebutan MC dan publikasi utama.' },
+  { nama: 'Sponsor Pendukung', jumlah: 2, nilai: 25_000_000, manfaat: 'Logo di materi acara & videotron; area aktivasi sesuai kesepakatan; penyebutan MC selama 2 hari acara.' },
   { nama: 'Mitra Program', jumlah: 3, nilai: (totalRab - 150_000_000) / 3, manfaat: 'Dukungan satu program atau kebutuhan acara; logo pada materi program dan apresiasi dalam laporan mitra.' },
 ] as const;
 export const targetSponsor = sponsorUsulan.reduce((total, row) => total + row.jumlah * row.nilai, 0);
@@ -27,7 +27,7 @@ export const targetSponsor = sponsorUsulan.reduce((total, row) => total + row.ju
 export const manfaatSponsor = [
   { nama: 'Identitas brand', nilai: ['“Didukung oleh” + logo terbesar di materi utama', 'Logo tingkat pendukung di materi utama', 'Logo di materi program yang didukung'] },
   { nama: 'Area acara', nilai: ['Panggung, gapura & photobooth', 'Panggung & papan mitra', 'Area program pilihan'] },
-  { nama: 'Booth aktivasi', nilai: ['Usulan 3 × 3 m · selama 3 hari', 'Usulan 2 × 3 m · selama 3 hari', 'Titik sampling pada sesi program'] },
+  { nama: 'Booth aktivasi', nilai: ['Usulan 3 × 3 m · selama 2 hari acara', 'Usulan 2 × 3 m · selama 2 hari acara', 'Titik sampling pada sesi program'] },
   { nama: 'Videotron', nilai: ['Usulan video ≤30 detik · 12 tayang/hari', 'Usulan video ≤15 detik · 6 tayang/hari', 'Logo bersama pada sesi program'] },
   { nama: 'Penyebutan MC', nilai: ['6 kali/hari · total 18 kali', '3 kali/hari · total 9 kali', '3 kali pada program pilihan'] },
   { nama: 'Publikasi khusus', nilai: ['3 unggahan feed + 9 story', '2 unggahan feed + 6 story', '1 unggahan feed + 3 story'] },
@@ -39,7 +39,7 @@ export const aktivasiSponsor = [
   { hari: 'Hari 3 · Champion Day', kegiatan: 'Penguatan brand & penutupan', rincian: 'Games berhadiah, apresiasi mitra, dokumentasi pemenang dan rangkuman acara untuk publikasi.' },
 ] as const;
 export const syaratSponsor = [
-  'Seluruh manfaat dan kuota di atas adalah usulan untuk 3 hari; dikunci dalam perjanjian setelah denah, materi dan rundown disetujui.',
+  'Seluruh manfaat dan kuota di atas adalah usulan untuk 2 hari acara (30–31 Desember); dikunci dalam perjanjian setelah denah, materi dan rundown disetujui.',
   'Eksklusivitas kategori hanya untuk Sponsor Utama bila disepakati tertulis; tidak termasuk tenant independen tanpa kesepakatan tambahan.',
   'Brand menyediakan materi siap tayang dan petugas booth; produksi booth, listrik tambahan, produk sampling & hadiah di luar paket kecuali disepakati.',
   'Dukungan barang/jasa dinilai sesuai pos RAB yang digantikan. Tidak menjamin jumlah pengunjung, penjualan, jangkauan atau data pribadi pengunjung.',

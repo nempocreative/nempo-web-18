@@ -116,7 +116,7 @@
 .psg26-btn-garis { border-color: var(--psg26-line); color: var(--psg26-text); background: rgba(36, 20, 8, 0.55); }
 .psg26-btn-garis:hover { background: rgba(36, 20, 8, 0.9); }
 
-/* ── Tiga hari ── */
+/* ── Hari acara ── */
 .psg26-hari { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 820px) { .psg26-hari { grid-template-columns: 1fr; } }
 .psg26-hari-kartu {

@@ -89,7 +89,7 @@ const reasons = [
     ),
     headline: 'Peluang Festival|Autentik',
     body: 'Peluang besar untuk festival yang menggabungkan budaya asli, nostalgia tempo dulu & komunitas kreatif.',
-    stat: '3 Hari',
+    stat: '2 Hari',
     statLabel: 'festival penuh',
     delay: 0.36,
   },

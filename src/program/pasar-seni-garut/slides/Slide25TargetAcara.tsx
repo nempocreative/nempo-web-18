@@ -67,7 +67,7 @@ const targets: { Icon: IconComponent; item: string; target: string; highlight: b
   { Icon: IconSponsor,    item: 'Sponsor Pendukung',  target: '20 Brand',                 highlight: false },
   { Icon: IconMedia,      item: 'Media Partner',      target: '30 Media',                 highlight: false },
   { Icon: IconTransaksi,  item: 'Transaksi UMKM',     target: 'Rp500 Juta – Rp1 Miliar', highlight: true  },
-  { Icon: IconDurasi,     item: 'Durasi',             target: '3 Hari',                   highlight: false },
+  { Icon: IconDurasi,     item: 'Durasi',             target: '2 Hari',                   highlight: false },
   { Icon: IconArea,       item: 'Area Festival',      target: '5.000 – 10.000 m²',        highlight: false },
 ];
 
@@ -110,7 +110,7 @@ export default function Slide25TargetAcara() {
   const [hov, setHov] = useState<number | null>(null);
 
   const visitors = useCountUp(15, 1400, go);
-  const days     = useCountUp(3,  1000, go);
+  const days     = useCountUp(2,  1000, go);
 
   useEffect(() => {
     const t = setTimeout(() => setGo(true), 80);
@@ -497,7 +497,7 @@ export default function Slide25TargetAcara() {
           animation:'dividerPulse25 3s ease-in-out 0.5s infinite',
         }} />
 
-        {/* 3 Hari */}
+        {/* 2 Hari */}
         <div style={{ textAlign:'center', position:'relative' }}>
           <p style={{
             fontFamily:'var(--font-display,serif)', fontWeight:900,
